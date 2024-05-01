@@ -258,6 +258,7 @@ button {
 .landing__row {
   display: flex;
   align-items: center;
+  margin: 0 455px;
 }
 
 .landing__description {
@@ -331,6 +332,18 @@ button {
 .landing__para {
   margin: 32px 0;
   font-size: 16px;
+}
+
+.landing__blob {
+  pointer-events: none;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: -10;
+  height: 256px;
+  width: 256px;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: .05;
 }
 
 /* Features */
@@ -427,6 +440,16 @@ button {
   line-height: 2;
 }
 
+.features__blob {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 256px;
+  transform: translateX(100px) translateY(900px);
+  opacity: 0.25;
+}
+
 /* Quality Work */
 
 #quality__work {
@@ -449,6 +472,7 @@ button {
 .quality__row {
   display: flex;
   align-items: center;
+  margin: 0 455px;
 }
 
 .quality__title {
@@ -486,6 +510,8 @@ button {
 .quality__img--wrapper {
   width: 55%;
   vertical-align: middle;
+  position: relative;
+
 }
 
 .quality__img--right {
@@ -513,6 +539,18 @@ button {
   cursor: pointer;
 }
 
+.quality__square {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: -10;
+  height: 80px;
+  width: 80px;
+  color: rgb(100 21 255);
+  fill: currentColor;
+  transform: translateX(50%) translateY(33%);
+}
+
 /* Steps */
 
 #Steps {
@@ -535,12 +573,14 @@ button {
 .steps__row {
   padding: 96px 0;
   display: flex;
+  margin: 0 455px;
 }
 
 .steps__img--wrapper {
   width: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .steps__img {
@@ -597,6 +637,16 @@ button {
   max-width: 80%;
 }
 
+.steps__square {
+  position: absolute;
+  z-index: -10;
+  height: 160px;
+  width: 160px;
+  color: rgb(100, 21, 255, 0.15);
+  fill: currentColor;
+  transform: translateX(0) translateY(109%);
+}
+
 /* Values */
 
 #Values {
@@ -618,6 +668,7 @@ button {
 
 .values__row {
   display: flex;
+  margin: 0 455px;
 }
 
 .values__description {
@@ -728,7 +779,7 @@ button {
 /* Plans */
 
 #plans {
-  margin: 64px;
+  margin: 64px 455px;
   text-align: center;
   animation: fade-left 500ms 600ms;
 }
@@ -786,6 +837,7 @@ button {
   padding: 8px 32px;
   margin-top: 64px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .plan__highlight--green {
@@ -943,6 +995,18 @@ button {
   color: white;
 }
 
+.pricing__blob {
+  pointer-events: none;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: -20;
+  height: 256px;
+  width: 256px;
+  opacity: 0.25;
+  transform: translateX(-450%) translateY(50%);
+}
+
 /* Testimonials */
 
 #testimonials {
@@ -965,6 +1029,7 @@ button {
 .test__row {
   display: flex;
   flex-direction: center;
+  margin: 0 455px;
 }
 
 .test__info {
@@ -1113,6 +1178,7 @@ button {
   display: flex;
   padding: 0 32px;
   align-items: center;
+  margin: 0 455px;
 }
 
 .contact__text {
@@ -1165,6 +1231,28 @@ button {
   background-color: white;
   color: #6415ff;
   cursor: pointer;
+}
+
+.blob__left {
+  height: 320px;
+  width: 320px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-5rem) translateY(8rem);
+  color: rgb(80 17 204);
+  opacity: .5;
+}
+
+.blob__right {
+  height: 320px;
+  width: 320px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(5rem) translateY(-16rem);
+  color: rgb(80 17 204);
+  opacity: .5;
 }
 
 /* Footer */
@@ -1270,11 +1358,12 @@ hr {
   padding: 8px 12px;
 }
 
-
 /* Smartphones, Tablets, Large Phones */
 @media (max-width: 768px) {
   .landing__row {
     flex-wrap: wrap;
+    margin: 0px;
+    align-items: center;
   }
 
   .landing__description {
@@ -1295,6 +1384,60 @@ hr {
     margin-left: 80px;
   }
 
+  .features__row {
+    margin: 0px;
+    max-width: 90%;
+  }
+
+  .features__description {
+    text-align: center;
+  }
+
+  .quality__row {
+    margin: 0px;
+    max-width: 90%;
+  }
+
+  .steps__row {
+    margin: 0px;
+    max-width: 90%;
+  }
+
+  .values__row {
+    margin: 0px;
+    max-width: 90%;
+  }
+
+  #plans {
+    margin: 0px;
+    max-width: 90%;
+  }
+
+  .test__row {
+    margin: 0px;
+    max-width: 90%;
+  }
+
+  .contact__row {
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    overflow: none;
+  }
+
+  .contact__info {
+    margin: 0 0 0 16px;
+  }
+
+  .get__started {
+    margin-bottom: 16px;
+  }
+
+  .contact__btn--wrapper {
+    flex-direction: column;
+    margin-left: 32px;
+  }
+
   .service {
     width: calc(100%/2);
   }
@@ -1302,12 +1445,17 @@ hr {
 }
 
 @media (max-width: 480px) {
+  main {
+    margin: 0px;
+  } 
+
   h1 {
     font-size: 30px;
   }
 
   .landing__row {
     flex-wrap: wrap;
+    margin: 0px;
   }
 
   .landing__description {
@@ -1338,8 +1486,13 @@ hr {
   width: calc(100%/1);
   }
 
+  #quality__work {
+    padding: 32px 0;
+  }
+
   .quality__row {
     flex-direction: column;
+    margin: 0px;
   }
 
   .quality__description--left {
@@ -1367,6 +1520,8 @@ hr {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin: 0px;
+    padding: 32px 0;
   }
 
   .steps__description {
@@ -1380,6 +1535,7 @@ hr {
 
   .values__row {
     flex-direction: column;
+    margin: 0px;
   }
 
   .values__description {
@@ -1399,11 +1555,18 @@ hr {
     flex-wrap: wrap;
   }
 
+  #plans {
+    margin: 0px;
+    max-width: 90%;
+  }
+
   .test__row {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0px;
+    max-width: 90%;
   }
 
   .test__info {
@@ -1431,10 +1594,12 @@ hr {
     display: flex;
     flex-direction: column;
     margin-top: 24px;
+    margin: 0px;
   }
 
   .contact__info {
-    text-align: center
+    text-align: center;
+    max-width: 90%;
   }
 
   .contact__btn {
@@ -1470,7 +1635,3 @@ hr {
   }
 
 }
-
-/* Website Link */
-
-https: ; //treact.owaiskhan.me/components/landingPages/SaaSProductLandingPage
